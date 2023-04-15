@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>wallpapers HD</title>
+	<style>
+		img {
+			max-width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Image Gallery</h1>
+	{% for image in wallpapers %}
+	<div class="image-container">
+		<img src="{{ image }}" alt="{{ image.caption }}">
+		<p>{{ image.caption }}</p>
+		<a href="{{ image }}">Download</a><br><br>
+		
+	</div>
+	{% endfor %}
+</body>
+</html>
+
