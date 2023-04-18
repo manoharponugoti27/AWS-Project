@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Gallery</title>
+</head>
+<body>
+	<h1>Image Gallery</h1>
+	{% for image in images %}
+	<div class="image-container">
+		<img src="{{ url_for('static', filename=image.filename) }}" alt="{{ image.caption }}">
+		<p>{{ image.caption }}</p>
+	</div>
+	{% endfor %}
+</body>
+</html>
+
